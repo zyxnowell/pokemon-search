@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  	<head>
+    	<meta charset="UTF-8">
+ 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+  		<!-- Stylesheets -->
+  		<link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+  		<link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+
+  		<!-- JS -->
+  		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.2.min.js"></script>
+  		<script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
+  		<script src="js/bootstrap/bootstrap.min.js"></script>
+
+  		<script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+    	<script src="js/bootstrap/ui-bootstrap-tpls-2.5.0.min.js"></script>
+    	<script src="app.js"></script>
+    	<script src="app.service.js"></script>
+    	
+    	<title>Pokemon Search</title>
+
+    	<style type="text/css">
+    		body{
+    			background-color: #7e7e7e;
+    		}
+    	</style>
+  	</head>
+  	<body ng-app="app">
+		<div class="container fixed-top">
+			<nav class="navbar navbar-inverse bg-inverse navbar-toggleable-md bg-faded pb-lg-2 pb-sm-3">
+			  	<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar">
+			    	<span class="navbar-toggler-icon"></span>
+			  	</button>
+			  	<img src="img/sprites/items/dream-world/master-ball.png" height="30" width="30">
+
+				<div class="collapse navbar-collapse" id="navbar">
+				    <ul class="navbar-nav mr-auto">
+					    <li class="nav-item active">
+					        <a class="nav-link" href="#">Home</a>
+					    </li>
+					    <li class="nav-item">
+					        <a class="nav-link" href="#">Advance Search</a>
+					    </li>
+					    <li class="nav-item">
+					        <a class="nav-link" href="#">About Us</a>
+					    </li>
+				    </ul>
+				    <form class="form-inline my-2 my-lg-0">
+				      	<input class="form-control mr-sm-2" type="text" placeholder="Enter keyword...">
+				      	<button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search <i class="fa fa-search" aria-hidden="true"></i></button>
+				    </form>
+				</div>
+			</nav>
+  		</div>
+  		<div class="container" style="height: 1500px;">
+  			<!-- This is where you inject your templates -->
+  			<div ui-view></div>
+  		</div>
+  	</body>
+</html>
