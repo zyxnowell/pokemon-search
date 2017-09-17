@@ -12,10 +12,12 @@
             }])
         .run(["$rootScope", "pokemonService",
             function ($rootScope, pokemonService) {
-                pokemonService.getAllPokemons()
-                    .then(function (pokemons) {
-                        $rootScope.pokemons = pokemons;
-                    });
+                if($rootScope.pokemons == undefined){
+                    pokemonService.getAllPokemons()
+                        .then(function (pokemons) {
+                            $rootScope.pokemons = pokemons;
+                        });
+                }
             }]);
 
     angular.module("app.pokemon", [])
@@ -27,11 +29,7 @@
                         templateUrl: "templates/jumbotron.html",
                         controller: ["$scope", "$rootScope", "pokemonService",
                             function ($scope, $rootScope, pokemonService) {
-                                pokemonService.getAllPokemons()
-                                    .then(function (pokemons) {
-                                        $scope.pokemons = pokemons;
-                                        
-                                    });
+                                
                             }]
                     })
             }
